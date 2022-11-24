@@ -26,7 +26,7 @@ Live website link here : [Live link](https://leestays.com/)
 -   Manage coupons
 
 
-### `For `NDA Agreement` I have deleted some Codes and removed some Logics from the repo. Just the structure and my coding pattern are there for the recruiters to get an idea about my Code Structure and Pattern. So, it will not help you if you want to download the codes. `
+### For `NDA Agreement` I have deleted some Codes and Removed some Logics from the repo. Just the structure and my coding pattern is there for the recruiters to get an idea about my `Code Structure and Pattern`. `So, it will not help you if you want to download the codes`. 
 
 # Developer Info
 
