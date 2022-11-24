@@ -1,0 +1,112 @@
+.popular-item {
+    margin-bottom: 60px;
+    overflow: hidden;
+    background-color: $brand-white;
+
+    @media #{$small_device} {
+        margin-bottom: 35px;
+    }
+
+    .pt-img {
+        @include border-radius(15px);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        @media #{$small_device} {
+            img {
+                @include border-radius(15px);
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+
+    .pt-txt {
+        border: 1px solid #D9D9D9;
+        height: 100%;
+        max-height: 365px;
+        @include border-radius(15px);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 50px 60px;
+
+        @media #{$small_device} {
+            @include border-radius(15px);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            padding: 25px 20px;
+            min-height: 100%;
+        }
+
+        h3 {
+            font-size: 36px;
+            color: #5A5A5A;
+            margin-bottom: 20px;
+            @media #{$small_device} {
+                font-size: 28px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            color: #c7c7c7;
+            line-height: 32px;
+        }
+    }
+
+    &:nth-child(even) {
+        .pt-txt {
+            @include border-radius(15px);
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            text-align: right;
+            @media #{$small_device} {
+                @include border-radius(15px);
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                text-align: left;
+            }
+        }
+
+        .pt-img {
+            @include border-radius(15px);
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+.desti-card {
+    position: relative;
+    @media #{$small_device} {
+        margin-bottom: 30px;
+    }
+    .desti-img {
+        overflow: hidden;
+        @include border-radius(5px);
+
+        img {
+            transform: scale(1);
+            @include transition();
+        }
+    }
+
+    h4 {
+        position: absolute;
+        bottom: 5px;
+        left: 25px;
+        font-size: 18px;
+
+        a {
+            color: $brand-white;
+        }
+    }
+
+    &:hover .desti-img img {
+        transform: scale(1.1);
+    }
+
+    &:hover h4 a {
+        color: $theme-color;
+    }
+}

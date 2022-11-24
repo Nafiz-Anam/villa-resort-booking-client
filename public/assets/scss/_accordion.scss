@@ -1,0 +1,23 @@
+div#faq-wrapper {
+    background: #f5f4f4;
+    border: 1px solid #BBBBBB;
+    .faq-item{
+        border-bottom: 1px solid #BBBBBB;
+        padding: 15px 20px;
+        .faq-title{
+            font-size: 20px;
+            font-weight: 400;
+            @extend .overly;
+            cursor: pointer;
+            padding-left: 25px;
+            &::before{
+                font-family: fontawesome;
+                content: "\f067";
+                background: none;
+            }
+           &[aria-expanded="true"]::before{
+               content: "\f068";
+           }
+        }
+    }
+}

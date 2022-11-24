@@ -1,0 +1,112 @@
+.s-villa {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.villa-section {
+    .owl-nav>div {
+        top: 40%;
+    }
+
+    .owl-dots {
+        margin-top: 30px;
+    }
+}
+.top-villa{
+    padding-bottom: 70px;
+}
+.villa-entry {
+    margin-bottom: 30px;
+    .villa-txt {
+        padding: 15px 20px 30px;
+        @include border-radius(10px);
+        @extend .overly;
+
+        &::before {
+            background: #f6f6f6;
+            height: 110%;
+            top: -20px;
+            @include border-radius(10px);
+        }
+
+        h4 {
+            font-weight: 500;
+
+            span {
+                float: right;
+                padding-top: 6px;
+                font-size: 15px;
+
+                i {
+                    color: #FFC02E;
+                }
+            }
+        }
+        .villa-meta{
+            span{
+                font-size: 15px
+            }
+        }
+    }
+
+    .villa-img {
+        position: relative;
+        z-index: 2;
+
+        .batch {
+            position: absolute;
+            right: 30px;
+            top: 10px;
+            color: $brand-white;
+            z-index: 2;
+        }
+
+
+
+        .villa-gallery {
+            img {
+                @include border-radius(10px);
+            }
+        }
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .owl-nav>div {
+        left: 10px;
+        z-index: 5;
+        width: 26px;
+        height: 26px;
+        background: rgba(255, 255, 255, 0.8);
+        @include border-radius(50px);
+        text-align: center;
+        line-height: 26px;
+        &.owl-next {
+            right: 10px;
+            left: auto;
+        }
+    }
+    .owl-carousel .owl-item{
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .slider-counter{
+        font-size: 14px;
+        color: #444444;
+    }
+}
+.map-view{
+    overflow-x: hidden;
+    .map-wrap {
+        position: relative;
+    }
+    #google-map{
+        height: 550px !important;
+        width: 117%;
+    }
+}

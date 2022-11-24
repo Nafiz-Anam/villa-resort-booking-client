@@ -1,0 +1,185 @@
+@mixin transition($what: all, $time: 0.4s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+  -moz-transition: $what $time $how;
+  -ms-transition: $what $time $how;
+  -o-transition: $what $time $how;
+  transition: $what $time $how;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+/*
+  $shadow-color: red;  // could also be a #F9F8F6 type color
+  @include box-shadow(0 0px 12px rgba($shadow-color, .9));
+*/
+
+// For Opacity
+@mixin opacity($value) {
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+// generic transform
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// translate
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew ($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//transform origin
+@mixin transform-origin ($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+//Clear
+@mixin clear {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin list-clear {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+
+// Background
+
+@mixin background ($position: center, $size: cover, $repeat: no-repeat) {
+  background: {
+    position: $position;
+    size: $size;
+    repeat: $repeat;
+  }
+}
+
+@mixin heading-link {
+  color: $heading-color;
+}
+
+@mixin heading {
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.2;
+  @include heading-link;
+}
+
+@mixin heading-1 {
+  @include heading;
+  font-size: 40px;
+  @media #{$small_device} {
+    font-size: 30px;
+  }
+
+}
+
+@mixin heading-2 {
+  @include heading;
+  font-size: 32px;
+  @media #{$small_device} {
+    font-size: 26px;
+  }
+}
+
+@mixin heading-3 {
+  @include heading;
+  font-size: 28px;
+  @media #{$small_device} {
+    font-size: 24px;
+  }
+}
+
+@mixin heading-4 {
+  @include heading;
+  font-size: 24px;
+}
+
+@mixin heading-5 {
+  @include heading;
+  font-size: 20px;
+}
+
+@mixin heading-6 {
+  @include heading;
+  font-size: 16px;
+}
+
+/*
+h1 { @include heading-1; }
+h2 { @include heading-2; }
+h3 { @include heading-3; }
+h4 { @include heading-4; }
+.sidebar h2 { @include heading-4; }
+*/

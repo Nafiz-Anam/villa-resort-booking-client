@@ -1,0 +1,84 @@
+// Template Base
+
+/* ======================================
+1.2 FONTS FOR THEME
+========================================*/
+
+body {
+  font-family: $font;
+  background-color: $brand-white;
+  color: $color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  font-weight: 600;
+}
+
+a {
+  color: $color;
+  @include transition;
+  text-decoration: none;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    @include transition;
+    color: $color;
+  }
+}
+
+input,
+textarea {
+  color: $brand-light;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #e0e1e5;
+  background: $brand-white;
+  &:focus{
+    outline: 0 none;
+  }
+}
+input[type="range"]::-webkit-slider-runnable-track {      
+  background-color: $theme-color;
+  transition: all .2s ease;
+  height: 1px;
+}
+input[type="range"]::-webkit-progress-value {
+  background-color: #ff0000; // red
+}
+img,
+figure {
+  max-width: 100%;
+  object-fit: cover;
+  margin: 0px;
+  vertical-align: middle;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $brand-light;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $brand-light;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $brand-light;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $brand-light;
+}
+.subtitle{
+  font-size: 20px;
+  margin-bottom: 15px;
+}

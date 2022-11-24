@@ -1,0 +1,97 @@
+.search-widget {
+    background-color: #F5F5F5;
+    padding: 15px;
+
+    .widget-head {
+        @include overly;
+        @include clear;
+        margin-bottom: 30px;
+
+        &::before {
+            background-color: $brand-white;
+            width: 107%;
+            height: 63px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+        }
+
+        h3 {
+            float: left;
+            margin: 8px 8px 0px;
+        }
+
+        .custom-btn {
+            float: right;
+            padding: 6px 15px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    .search-forms {
+        .form-group {
+            @include clear;
+            .half-form {
+                width: 47%;
+                float: left;
+            }
+            
+            .half-form + .half-form {
+                float: right;
+            }
+            input{
+                padding: 6px 10px;
+            }
+            label.option-name {
+                float: left;
+            }
+
+            .fg-inner {
+                float: right;
+                width: 70%;
+
+                .fg-item {
+                    background: #fff;
+                    padding: 5px 13px;
+                    @include border-radius(5px);
+                    margin-bottom: 7px;
+                    position: relative;
+
+                    label {
+                        margin: 0;
+                        display: block;
+                    }
+
+                    input {
+                        width: auto;
+                        margin-top: 7px;
+                        position: absolute;
+                        right: 9px;
+                        top: 6px;
+                    }
+                }
+            }
+        }
+       
+    }
+}
+
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #a3bbd0;
+    color: white;
+}
+.place-shorting .ui-selectmenu-button {
+    margin-bottom: 28px;
+    display: inline-block;
+    padding: 9px 20px;
+    width: auto;
+    line-height: 1;
+    @include border-radius(100px);
+    border: 1px solid $brand-light;
+    
+}
+.place-shorting .ui-selectmenu-button:nth-child(2){
+    margin-right: 20px;
+}
