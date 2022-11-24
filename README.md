@@ -4,7 +4,7 @@
 
 Live website link here : [Live link](https://leestays.com/)
 
-Backendend repo: [Frontend link](https://github.com/Nafiz-Anam/villa-resort-booking-server)
+Backendend repo: [Backend link](https://github.com/Nafiz-Anam/villa-resort-booking-server)
 
 # Features
 
